@@ -6,7 +6,7 @@ A dark 256-color color scheme for vim.
 Features
 --------
 - Minimal colors, to avoid distracting
-- Shades of gray for most elements; red for exceptional elements
+- Shades of gray for most elements; orange for exceptional elements
   (constants & errors)
 - Bright keywords to highlight structure.
 - Dark comments & strings to emphasize surrounding code.
