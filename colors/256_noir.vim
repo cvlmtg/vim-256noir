@@ -25,9 +25,9 @@ let s:GRAY       = [ 250,    '#bcbcbc' ]
 let s:MID_GRAY   = [ 245,    '#8a8a8a' ]
 let s:DARK_GRAY  = [ 234,    '#1c1c1c' ]
 let s:BLACK      = [ 16,     '#000000' ]
-let s:BRIGHT_RED = [ 196,    '#ff0000' ]
-let s:MID_RED    = [ 124,    '#af0000' ]
-let s:DARK_RED   = [ 88,     '#870000' ]
+let s:BRIGHT_COL = [ 214,    '#ffaf00' ]
+let s:MID_COL    = [ 172,    '#d78700' ]
+let s:DARK_COL   = [ 136,    '#af8700' ]
 let s:PURPLE     = [ 98,     '#875fd7' ]
 let s:ADD        = [ 120,    '#87ff87' ]
 let s:DEL        = [ 167,    '#d75f5f' ]
@@ -41,19 +41,19 @@ call s:Hi('Normal', s:UI_BG, s:GRAY, 'NONE')
 set background=dark
 
 call s:Hi('Boolean',        s:NONE,     s:WHITE,      'NONE')
-call s:Hi('Character',      s:NONE,     s:BRIGHT_RED, 'NONE')
+call s:Hi('Character',      s:NONE,     s:BRIGHT_COL, 'NONE')
 call s:Hi('Constant',       s:NONE,     s:WHITE,      'bold')
 call s:Hi('Debug',          s:NONE,     s:GRAY,       'NONE')
 call s:Hi('Define',         s:NONE,     s:WHITE,      'NONE')
 call s:Hi('Delimiter',      s:NONE,     s:GRAY,       'NONE')
-call s:Hi('Error',          s:DARK_RED, s:WHITE,      'NONE')
+call s:Hi('Error',          s:DARK_COL, s:WHITE,      'NONE')
 call s:Hi('Exception',      s:NONE,     s:GRAY,       'NONE')
-call s:Hi('Float',          s:NONE,     s:BRIGHT_RED, 'NONE')
+call s:Hi('Float',          s:NONE,     s:BRIGHT_COL, 'NONE')
 call s:Hi('Function',       s:NONE,     s:WHITE,      'NONE')
 call s:Hi('Include',        s:NONE,     s:WHITE,      'NONE')
 call s:Hi('Label',          s:NONE,     s:GRAY,       'NONE')
 call s:Hi('Macro',          s:NONE,     s:GRAY,       'NONE')
-call s:Hi('Number',         s:NONE,     s:BRIGHT_RED, 'NONE')
+call s:Hi('Number',         s:NONE,     s:BRIGHT_COL, 'NONE')
 call s:Hi('Operator',       s:NONE,     s:WHITE,      'NONE')
 call s:Hi('PreCondit',      s:NONE,     s:WHITE,      'NONE')
 call s:Hi('Repeat',         s:NONE,     s:WHITE,      'NONE')
@@ -61,7 +61,7 @@ call s:Hi('SpecialChar',    s:NONE,     s:WHITE,      'NONE')
 call s:Hi('SpecialComment', s:NONE,     s:MID_GRAY,   'NONE')
 call s:Hi('String',         s:NONE,     s:MID_GRAY,   'NONE')
 call s:Hi('Structure',      s:NONE,     s:WHITE,      'NONE')
-call s:Hi('Tag',            s:NONE,     s:BRIGHT_RED, 'NONE')
+call s:Hi('Tag',            s:NONE,     s:BRIGHT_COL, 'NONE')
 call s:Hi('Todo',           s:NONE,     s:WHITE,      'NONE')
 call s:Hi('Typedef',        s:NONE,     s:WHITE,      'NONE')
 
@@ -82,23 +82,23 @@ hi! link Question Comment
 
 " interface
 
-call s:Hi('Cursor',       s:WHITE,     s:BLACK,      'NONE')
-call s:Hi('ErrorMsg',     s:MID_RED,   s:WHITE,      'NONE')
-call s:Hi('FoldColumn',   s:UI_BG,     s:GRAY,       'NONE')
-call s:Hi('Folded',       s:NONE,      s:BRIGHT_RED, 'NONE')
-call s:Hi('IncSearch',    s:GRAY,      s:BLACK,      'NONE')
-call s:Hi('CursorLineNr', s:UI_BG,     s:BRIGHT_RED, 'NONE')
-call s:Hi('LineNr',       s:UI_BG,     s:UI_FG,      'NONE')
-call s:Hi('ModeMsg',      s:UI_BG,     s:GRAY,       'NONE')
-call s:Hi('Search',       s:PURPLE,    s:WHITE,      'NONE')
-call s:Hi('Signcolumn',   s:UI_BG,     s:UI_FG,      'NONE')
-call s:Hi('StatusLine',   s:MID_RED,   s:WHITE,      'bold')
-call s:Hi('StatusLineNC', s:MID_GRAY,  s:UI_BG,      'NONE')
-call s:Hi('VertSplit',    s:UI_BG,     s:UI_FG,      'NONE')
-call s:Hi('Visual',       s:GRAY,      s:BLACK,      'NONE')
-call s:Hi('VisualNOS',    s:GRAY,      s:BLACK,      'NONE')
-call s:Hi('WarningMsg',   s:UI_BG,     s:BRIGHT_RED, 'NONE')
-call s:Hi('WildMenu',     s:WHITE,     s:MID_GRAY,   'NONE')
+call s:Hi('Cursor',       s:WHITE,      s:BLACK,      'NONE')
+call s:Hi('ErrorMsg',     s:BRIGHT_COL, s:DARK_GRAY,  'NONE')
+call s:Hi('FoldColumn',   s:UI_BG,      s:GRAY,       'NONE')
+call s:Hi('Folded',       s:NONE,       s:BRIGHT_COL, 'NONE')
+call s:Hi('IncSearch',    s:GRAY,       s:BLACK,      'NONE')
+call s:Hi('CursorLineNr', s:UI_BG,      s:BRIGHT_COL, 'NONE')
+call s:Hi('LineNr',       s:UI_BG,      s:UI_FG,      'NONE')
+call s:Hi('ModeMsg',      s:UI_BG,      s:GRAY,       'NONE')
+call s:Hi('Search',       s:PURPLE,     s:WHITE,      'NONE')
+call s:Hi('Signcolumn',   s:UI_BG,      s:UI_FG,      'NONE')
+call s:Hi('StatusLine',   s:MID_COL,    s:DARK_GRAY,  'bold')
+call s:Hi('StatusLineNC', s:MID_GRAY,   s:UI_BG,      'NONE')
+call s:Hi('VertSplit',    s:UI_BG,      s:UI_FG,      'NONE')
+call s:Hi('Visual',       s:GRAY,       s:BLACK,      'NONE')
+call s:Hi('VisualNOS',    s:GRAY,       s:BLACK,      'NONE')
+call s:Hi('WarningMsg',   s:UI_BG,      s:BRIGHT_COL, 'NONE')
+call s:Hi('WildMenu',     s:WHITE,      s:MID_GRAY,   'NONE')
 hi! link NonText LineNr
 
 if version >= 700
@@ -115,10 +115,10 @@ if version >= 700
 endif
 
 if has("spell")
-  call s:Hi('SpellBad',   s:NONE, s:DARK_RED, 'underline')
+  call s:Hi('SpellBad',   s:NONE, s:DARK_COL, 'underline')
   call s:Hi('SpellCap',   s:NONE, s:NONE,     'underline')
   call s:Hi('SpellLocal', s:NONE, s:NONE,     'underline')
-  call s:Hi('SpellRare',  s:NONE, s:MID_RED,  'underline')
+  call s:Hi('SpellRare',  s:NONE, s:MID_COL,  'underline')
 endif
 
 " diff
