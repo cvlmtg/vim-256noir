@@ -43,6 +43,7 @@ set background=dark
 call s:Hi('Boolean',        s:NONE,     s:WHITE,      'NONE')
 call s:Hi('Character',      s:NONE,     s:BRIGHT_COL, 'NONE')
 call s:Hi('Constant',       s:NONE,     s:WHITE,      'bold')
+call s:Hi('Conceal',        s:MID_GRAY, s:UI_BG,      'underline')
 call s:Hi('Debug',          s:NONE,     s:GRAY,       'NONE')
 call s:Hi('Define',         s:NONE,     s:WHITE,      'NONE')
 call s:Hi('Delimiter',      s:NONE,     s:GRAY,       'NONE')
