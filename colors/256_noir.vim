@@ -30,7 +30,7 @@ let s:MID_COL    = [ 172,    '#d78700' ]
 let s:DARK_COL   = [ 136,    '#af8700' ]
 let s:CHANGE     = [ 98,     '#875fd7' ]
 let s:ADD        = [ 120,    '#209020' ]
-let s:DEL        = [ 167,    '#902020' ]
+let s:DEL        = [ 167,    '#b02020' ]
 let s:CHANGE     = s:CHANGE
 let s:UI_FG      = s:MID_GRAY
 let s:UI_BG      = s:BLACK
@@ -136,16 +136,8 @@ hi! link diffAdded    DiffAdd
 
 " nvim diagnostic
 
-call s:Hi('DiagnosticError', s:DEL,        s:DARK_GRAY, 'NONE')
+call s:Hi('DiagnosticError', s:DEL,        s:WHITE,     'NONE')
 call s:Hi('DiagnosticWarn',  s:BRIGHT_COL, s:DARK_GRAY, 'NONE')
 call s:Hi('DiagnosticHint',  s:UI_FG,      s:DARK_GRAY, 'NONE')
 call s:Hi('DiagnosticInfo',  s:UI_FG,      s:DARK_GRAY, 'NONE')
 call s:Hi('PMenu',           s:UI_FG,      s:DARK_GRAY, 'NONE')
-
-" coc.vim
-
-call s:Hi('CocErrorHighlight',   s:UI_BG, s:DEL,        'NONE')
-call s:Hi('CocWarningHighlight', s:UI_BG, s:BRIGHT_COL, 'NONE')
-call s:Hi('CocInfoHighlight',    s:UI_BG, s:ADD,        'NONE')
-call s:Hi('CocHintHighlight',    s:UI_BG, s:CHANGE,     'NONE')
-call s:Hi('CocUnusedHighlight',  s:DEL,   s:DARK_GRAY,  'NONE')
